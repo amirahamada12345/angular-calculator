@@ -6,5 +6,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'calculator';
+  resulte = '';
+  getAction(item:any){
+    this.resulte +=item;
+    // console.log(item);
+  }
+  equal(){
+    this.resulte=eval(this.resulte).toFixed(1)
+  }
+  reset(){
+    this.resulte=''
+  }
 }
